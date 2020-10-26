@@ -22,6 +22,11 @@ public class SchedulingWithSpringBootApplication {
 	void somejob() throws InterruptedException {
 		log.info("some-Job is :::-->" + new Date());
 	}
+
+	@Scheduled(cron = "5 * * * * *")
+	void somejob1() throws InterruptedException {
+		log.info("some-Job is :::-->" + new Date());
+	}
 }
 
 @EnableScheduling
